@@ -7,14 +7,13 @@ import {
 } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { IUser } from '../../interfaces/iuser';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IPost } from '../../interfaces/ipost';
 import { PostComponent } from '../post/post.component';
 import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, PostComponent, NgClass],
+  imports: [ PostComponent, NgClass],
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
 })
