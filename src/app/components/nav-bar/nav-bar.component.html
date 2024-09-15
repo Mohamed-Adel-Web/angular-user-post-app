@@ -1,0 +1,31 @@
+<nav class="shadow-lg p-3 rounded-5 ">
+  <div class="container">
+    <h3
+      class="fw-bold text-primary text-center border-3 border border-black rounded-5 p-2"
+    >
+      Choose a user to display their posts
+    </h3>
+    <ul class="row mt-3 gy-3 md:text-start list-unstyled ">
+      @for (user of usersData(); track user.id) {
+      <li
+        class="col-xl-2 col-lg-4 fw-bold text-capitalize nav-item "
+        (click)="loadUserPosts(user)"
+      >
+        <span
+          [ngClass]="{
+            'nav-link rounded-3 py-2 px-1 text-center border border-black': true,
+            active: userName() == user.username
+          }"
+          >{{ user.username }}</span
+        >
+      </li>
+
+      }
+    </ul>
+  </div>
+</nav>
+<section class="my-5 container">
+  @for (post of usersPosts(); track post.id) {
+  <app-post [post]="post" [userName]="getUserName()"></app-post>
+  }
+</section>

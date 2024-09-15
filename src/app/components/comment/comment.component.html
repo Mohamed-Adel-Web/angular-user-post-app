@@ -1,0 +1,17 @@
+<div class="comment mb-3 border-top border-3 my-3 py-2">
+  <div class="d-flex align-items-center mb-2">
+    <img
+      src="https://loremflickr.com/60/60?random={{comment.id}}"
+      class="rounded-circle me-2"
+      width="40"
+      height="40"
+      alt="Comment Profile Image"
+    />
+    <div>
+      <h6 class="mb-0 comment-name">{{ comment.name }}</h6>
+      <small class="text-muted comment-email">{{ comment.email }}</small>
+    </div>
+  </div>
+  <p class="bg-secondary-subtle p-2 rounded comment-body ">{{ comment.body }}</p>
+</div>
+

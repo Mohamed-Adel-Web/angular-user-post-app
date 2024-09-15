@@ -1,0 +1,12 @@
+$hover-color: #0861f2;
+.nav-link {
+  cursor: pointer;
+  &:hover {
+    background-color: $hover-color;
+    color: white;
+  }
+}
+.active{
+    background-color: $hover-color;
+    color: white;
+  }
